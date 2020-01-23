@@ -8,8 +8,24 @@ namespace Esri.ArcGISRuntime.Helpers.Tests
     [TestClass]
     public class Routing
     {
-        string username = "";
-        string password = "";
+        static string username = null;
+        static string password = null;
+
+        [ClassInitialize]
+        public static void ClassInitialize(TestContext context)
+        {
+            username = context.Properties["PortalUsername"] as string;
+            password = context.Properties["PortalPassword"] as string;
+        }
+
+        [TestInitialize]
+        public void TestInitialize()
+        {
+            if (username == null)
+                Assert.Inconclusive("Username not set");
+            if (password == null)
+                Assert.Inconclusive("Password not set");
+        }
         
         [TestMethod]
         public async Task GetDirections()

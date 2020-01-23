@@ -13,9 +13,33 @@ namespace Esri.ArcGISRuntime.Helpers
             return map;
         }
 
+        public static Map WithBaselayers(this Map map, params Layer[] layers)
+        {
+            map.Basemap = new Basemap(layers);
+            return map;
+        }
+
+        public static Map WithOperationalLayers(this Map map, params Layer[] layers)
+        {
+            map.OperationalLayers.AddRange(layers);
+            return map;
+        }
+
         public static Scene WithBasemap(this Scene scene, BasemapType type)
         {
             scene.Basemap = FromBasemapType(type);
+            return scene;
+        }
+
+        public static Scene WithBaselayers(this Scene scene, params Layer[] layers)
+        {
+            scene.Basemap = new Basemap(layers);
+            return scene;
+        }
+
+        public static Scene WithOperationalLayers(this Scene scene, params Layer[] layers)
+        {
+            scene.OperationalLayers.AddRange(layers);
             return scene;
         }
 

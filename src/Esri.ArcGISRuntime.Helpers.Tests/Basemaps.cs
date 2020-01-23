@@ -13,10 +13,13 @@ namespace Esri.ArcGISRuntime.Helpers.Tests
         [TestMethod]
         public void WithMap()
         {
-            var map = new Map().WithBasemap(BasemapType.StreetsNightVector);
+            var map = new Map().WithBasemap(BasemapType.StreetsNightVector).WithOperationalLayers(new OpenStreetMapLayer());
             Assert.IsNotNull(map.Basemap);
             Assert.IsTrue(map.Basemap.BaseLayers.Count > 0);
             Assert.IsInstanceOfType(map.Basemap.BaseLayers[0], typeof(ArcGISVectorTiledLayer));
+            Assert.AreEqual(1, map.OperationalLayers.Count);
+            Assert.IsInstanceOfType(map.OperationalLayers[0], typeof(OpenStreetMapLayer));
+
         }
 
         [TestMethod]

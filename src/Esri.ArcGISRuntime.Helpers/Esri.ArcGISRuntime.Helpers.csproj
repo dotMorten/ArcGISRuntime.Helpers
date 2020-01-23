@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Morten Nielsen</Authors>
+    <Description>A set of helper classes for use with the ArcGIS Runtime SDK</Description>
+    <Copyright>Copyright © Morten Nielsen 2020</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/dotMorten/ArcGISRuntime.Helpers</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/dotMorten/ArcGISRuntime.Helpers</PackageProjectUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <LangVersion>8.0</LangVersion>
+    <PackageId>dotMorten.ArcGISRuntime.Helpers</PackageId>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Esri.ArcGISRuntime" Version="100.7.0" />
+	<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-19270-01" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>

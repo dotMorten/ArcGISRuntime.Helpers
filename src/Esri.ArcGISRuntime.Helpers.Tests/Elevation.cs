@@ -9,7 +9,7 @@ namespace Esri.ArcGISRuntime.Helpers.Tests
         [TestMethod]
         public async Task CreateWorldElevationService()
         {
-            var svc = Esri.ArcGISRuntime.Helpers.Elevation.CreateWorldElevationService();
+            var svc = Esri.ArcGISRuntime.Helpers.Elevation.CreateWorldElevationSource();
             await svc.LoadAsync();
         }
     }

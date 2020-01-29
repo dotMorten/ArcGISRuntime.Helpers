@@ -9,7 +9,7 @@ namespace Esri.ArcGISRuntime.Helpers
     {
         public static string WorldGeocodeServiceUri { get; } = "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer";
         public static string WorldRoutingServiceUri { get; } = "https://route.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World";
-        public static string WorldElevationServiceUri { get; } = "http://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer";
+        public static string WorldElevationServiceUri { get; } = "https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer";
       
         public static Task<ArcGISPortal> ArcGISOnlinePortal { get; } = ArcGISPortal.CreateAsync();
         private static async Task<PortalItem> CreateItem(string itemId)
